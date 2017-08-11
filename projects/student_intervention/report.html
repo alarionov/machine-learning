@@ -11783,7 +11783,8 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: </strong> This is a classification problem</p>
+<p><strong>Answer: </strong></p>
+<p>The goal for this project is to predict whether student will graduate or not. This is a binary classification problem: 1 if student will graduate and 0 if not</p>
 
 </div>
 </div>
@@ -11885,7 +11886,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="c1"># TODO: Calculate number of students</span>
@@ -11901,7 +11902,7 @@ div#notebook {
 <span class="n">n_failed</span> <span class="o">=</span> <span class="n">student_data</span><span class="p">[</span><span class="n">student_data</span><span class="p">[</span><span class="s1">&#39;passed&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;no&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
 
 <span class="c1"># TODO: Calculate graduation rate</span>
-<span class="n">grad_rate</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">*</span> <span class="n">n_passed</span> <span class="o">/</span> <span class="n">n_students</span>
+<span class="n">grad_rate</span> <span class="o">=</span> <span class="mf">100.0</span> <span class="o">*</span> <span class="n">n_passed</span> <span class="o">/</span> <span class="n">n_students</span>
 
 <span class="c1"># Print the results</span>
 <span class="k">print</span> <span class="s2">&quot;Total number of students: {}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">n_students</span><span class="p">)</span>
@@ -11925,7 +11926,7 @@ div#notebook {
 Number of features: 31
 Number of students who passed: 265
 Number of students who failed: 130
-Graduation rate of the class: 0.67%
+Graduation rate of the class: 67.09%
 </pre>
 </div>
 </div>
@@ -14122,7 +14123,9 @@ F1 score for test set: 0.7838.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
-<p><strong>LogisticRegression</strong> was supposed to be the faster one, but it also happened to have the best F1 score</p>
+<p><strong>LogisticRegression</strong> happened to be the best model.</p>
+<p>Logistic regression and SVM have comparable training time and both models are much faster than Random Forest.</p>
+<p>Logistic regression has the shortest prediction time, the best score on unseen data and less overfit training data (the lowest score on training data)</p>
 
 </div>
 </div>
@@ -14143,6 +14146,8 @@ F1 score for test set: 0.7838.
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer: </strong></p>
+<p>During training, Logistic regression analyses different qualities of given data and assumems which qualities are important for correct prediction. Then, based on those assuptions, Logistic regression tries to predict the kind of data point it sees, and if the prediction is not correct, Logistic regression a little bit corrects its assumptions about importance of the qualities of the data.</p>
+<p>After model has seen enough of data it forms assuptions good enough to accurately predict what kind of data it sees</p>
 
 </div>
 </div>
